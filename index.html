@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Кликер v0.1.5.5 — Christmas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1>🎄 Кликер v0.1.5.5 — Christmas</h1>
+      <div class="tag">Clicker Studio — itsigor_los08</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel left">
+        <div class="circle-wrap">
+          <div id="clickCircle" class="click-circle" title="Кликни по кругу">
+            <img id="charImg" class="char-img" alt="Персонаж">
+            <div class="neon-ring" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="counter">Клики: <span id="score">0</span></div>
+        <div class="sub">Клики за нажатие: <span id="per">1</span> — Множитель: x<span id="mult">1.00</span></div>
+
+        <div class="controls">
+          <button id="shopBtn" class="btn">🏪 Магазин</button>
+          <button id="luckBtn" class="btn">Проверь удачу ☄️ (600)</button>
+          <button id="donateBtn" class="btn">💰 Донат</button>
+          <button id="settingsBtn" class="btn ghost">⚙️</button>
+        </div>
+
+        <div class="small-row">
+          <button id="resetBtn" class="btn ghost">♻️ Сброс</button>
+          <div class="ver">v0.1.5.5 — Christmas</div>
+        </div>
+      </section>
+
+      <section class="panel right">
+        <h3>🏬 Магазин улучшений</h3>
+        <div id="shopList" class="shop-list" role="list"></div>
+        <div class="shop-footer">
+          <div>Баланс: <strong id="balance">0</strong></div>
+          <div>Открыто: <strong id="opened">1</strong>/50</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 Clicker Studio | by itsigor_los08</footer>
+  </div>
+
+  <!-- audio will be loaded from the repo file music.mp3 -->
+  <audio id="bgm" preload="auto" loop></audio>
+
+  <!-- modal container -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <div id="modalContent"></div>
+      <div class="modal-actions"><button id="modalClose" class="btn ghost">Закрыть</button></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
