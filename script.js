@@ -6,7 +6,7 @@
 */
 
 const MUSIC_FILE = "music.mp3"; // <--- music file name in your repo
-const CHAR_FILE = "character.png"; // <--- character image name in repo
+const CHAR_FILE = "character.jpg"; // <--- character image name in repo
 
 // basic state
 const SAVE_KEY = "clicker_christmas_v0155";
@@ -174,3 +174,4 @@ function flash(txt){ const el = document.createElement("div"); el.textContent = 
 
 render();
 save();
+
