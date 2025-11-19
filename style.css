@@ -1,0 +1,28 @@
+:root{--bg:#02101a;--card:#0f1114;--accent:#ff3c3c;--neon:#1fb7ff}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#03040a);font-family:Inter,Segoe UI,Arial,sans-serif;color:#eaeaea}
+.app{max-width:1100px;margin:12px auto;padding:14px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.top h1{margin:0;color:var(--accent);font-size:20px}
+.layout{display:grid;grid-template-columns:360px 1fr;gap:12px;margin-top:12px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:12px}
+.circle-wrap{display:flex;align-items:center;justify-content:center;padding:8px}
+.click-circle{width:92%;max-width:360px;height:0;padding-bottom:92%;border-radius:50%;position:relative;overflow:hidden;border:6px solid rgba(31,183,255,0.18);box-shadow:0 0 30px rgba(31,183,255,0.08);cursor:pointer;transition:transform 140ms}
+.click-circle:active{transform:translateY(-8px) scale(1.01)}
+.char-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.neon-ring{position:absolute;inset:0;border-radius:50%;box-shadow:0 0 40px rgba(31,183,255,0.12);pointer-events:none}
+.counter{font-size:18px;font-weight:700;text-align:center;margin-top:10px}
+.sub{text-align:center;color:#cfcfcf;font-size:13px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.btn{background:linear-gradient(135deg,var(--accent),#ff8a50);border:0;color:#111;padding:10px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(255,255,255,0.06)}
+.small-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.ver{color:#bfcfdf;font-size:12px}
+.shop-list{display:flex;flex-direction:column;gap:8px;max-height:520px;overflow:auto;padding-right:6px}
+.shop-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(31,183,255,0.02),transparent);border:1px solid rgba(31,183,255,0.03)}
+.shop-footer{display:flex;justify-content:space-between;margin-top:12px;color:#cfcfcf}
+.footer{text-align:center;margin-top:14px;color:#aab}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;z-index:9999}
+.modal .modal-box{background:#0b0b0b;padding:16px;border-radius:10px;color:#eee;max-width:720px;width:92%}
+.modal-actions{text-align:right;margin-top:8px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.click-circle{max-width:320px}}
